@@ -1,0 +1,34 @@
+{
+  "name": "issuepress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=dev parcel src/index.html",
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url /issuePress/",
+    "deploy": "npm run build && gh-pages-deploy -- 'deploy release ver.'"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist"
+  },
+  "author": "life1st",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-transform-runtime": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "autoprefixer": "^9.5.0",
+    "babel-plugin-async-import": "^2.0.2",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "parcel": "^1.12.3",
+    "postcss-modules": "^1.4.1",
+    "prop-types": "^15.7.2",
+    "redux-devtools-extension": "^2.13.8",
+    "sass": "^1.17.3"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
